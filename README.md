@@ -2,6 +2,8 @@
 
 [Live Deployment](https://f1-visualization.vercel.app/)
 
+[Report](/report/CS7DS4%20Assignment%203%20Report.md)
+
 Built for CS7DS4
 
 The Formula 1 Race visualizer is an unofficial visualizer of races from 1996 onwards. The site will update with the latest races after they happen.
