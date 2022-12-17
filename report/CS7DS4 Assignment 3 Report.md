@@ -35,7 +35,7 @@ I was looking to visualize how a race evolved over time and while I had the prec
 
 The lap data did not include the starting positions either, using the starting grid position from the results data set, I estimated the relative time difference between each driver. Grid spots are $8 \text{m}$ apart [[3]](https://www.notion.so/CS7DS4-Assignment-3-729c02650a394ed588d67b3235a2ff20) and F1 cars have an average acceleration of $\approx11.1\text{m}/\text{s}^2$ to $100\text{km}/\text{h}$ [[4]](https://www.notion.so/CS7DS4-Assignment-3-729c02650a394ed588d67b3235a2ff20) therefore it would take $\sqrt2*8\text{m}/(11.1 \text{m}/\text{s}^2)\approx 1.2\text{s}$. This generated data is added to the very front of the list of lap data.
 
-As my application interacts with the API, I created a fallback for the data where regardless of the status of the API, the first two races of 2021 and 2022 can be visualized. I created a script (`pages\api\fallback\generate.js`) that generated an offline copy of the data (`helpers\apiFallback.js`). When the frontend detects a problem with the status of the Ergast API, it switches to an internal endpoint that serves the data in the way the original API does (`pages\api\fallback\[...fallback].js``).
+As my application interacts with the API, I created a fallback for the data where regardless of the status of the API, the first two races of 2021 and 2022 can be visualized. I created a script (`pages\api\fallback\generate.js`) that generated an offline copy of the data (`helpers\apiFallback.js`). When the frontend detects a problem with the status of the Ergast API, it switches to an internal endpoint that serves the data in the way the original API does (`pages\api\fallback\[...fallback].js`).
 
 ## Tools & Technology
 
