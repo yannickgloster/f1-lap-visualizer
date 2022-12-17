@@ -234,7 +234,7 @@ export default function Home() {
   const checkAPIStatus = () => {
     axios
       .get(`${APIBase}/seasons.json`)
-      .then((test) => {
+      .then((_) => {
         setApiInfo({
           status: APIStatus.online,
           time: new Date().toLocaleTimeString(),
