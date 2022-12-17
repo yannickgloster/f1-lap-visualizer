@@ -306,6 +306,14 @@ export default function Home() {
             target="_blank"
           >
             Yannick Gloster
+          </Link>{" "}
+          -{" "}
+          <Link
+            href="https://github.com/yannickgloster/f1-lap-visualizer"
+            underline="hover"
+            target="_blank"
+          >
+            Source Code
           </Link>
         </Typography>
       </Stack>
