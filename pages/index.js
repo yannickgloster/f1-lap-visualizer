@@ -301,7 +301,7 @@ export default function Home() {
         <Typography variant="subtitle2" display="block">
           Built by{" "}
           <Link
-            href="https://github.com/yannickgloster"
+            href="https://yannickgloster.com"
             underline="hover"
             target="_blank"
           >
