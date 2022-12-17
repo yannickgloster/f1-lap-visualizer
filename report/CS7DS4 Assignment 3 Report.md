@@ -9,9 +9,9 @@ Yannick Gloster (18308167)
 
 # The Dataset
 
-I chose to visualize Formula One races thanks to the Ergast API [[0]](https://www.notion.so/CS7DS4-Assignment-3-729c02650a394ed588d67b3235a2ff20). The Ergast API provides historical records for non-commercial purposes of Formula One races going back to the original world championships in 1950. The API provides lap timings from 1996 onwards which is the core of my application. 
+I chose to visualize Formula One races thanks to the Ergast API [[0]](https://www.notion.so/CS7DS4-Assignment-3-729c02650a394ed588d67b3235a2ff20). The Ergast API provides historical records for non-commercial purposes of Formula One races going back to the original world championships in 1950. The API provides lap timings from 1996 onwards which is the core of my application.
 
-Users select any year from 1996 onwards. Once selected, I query the Ergast API to get the list of races in that year. From the API, I get the round number, date, time, circuit name, and Wikipedia link to the event. The data 
+Users select any year from 1996 onwards. Once selected, I query the Ergast API to get the list of races in that year. From the API, I get the round number, date, time, circuit name, and Wikipedia link to the event. The data
 
 Using the round number I make an API request for the final results, the lap data for the race, and the constructor (in Formula One, teams are referred to as constructors [[1]](https://www.notion.so/CS7DS4-Assignment-3-729c02650a394ed588d67b3235a2ff20)) information for that race. The data is comprised of multiple tables connected through IDs.
 
@@ -49,9 +49,9 @@ The artifact is hosted for free through Vercel [[9]](https://www.notion.so/CS7DS
 
 # Tasks
 
-The users of the visualization will be able to watch an entire Formula One race while seeing the relative position of drivers next to each other. Typically, a person will watch Formula 1 as a TV broadcast where the focus is on whatever Driver the camera feed is being focused on, by engaging in the race through my visualizer, they can better see the relative position of all the drivers. This falls under the *********analysis********* ************action. If someone has not watched one of the races before, they will get to discover and explore how drivers performed. If they have watched the race, they will get to enjoy the race from a new perspective.
+The users of the visualization will be able to watch an entire Formula One race while seeing the relative position of drivers next to each other. Typically, a person will watch Formula 1 as a TV broadcast where the focus is on whatever Driver the camera feed is being focused on, by engaging in the race through my visualizer, they can better see the relative position of all the drivers. This falls under the **analysis** action. If someone has not watched one of the races before, they will get to discover and explore how drivers performed. If they have watched the race, they will get to enjoy the race from a new perspective.
 
-The user gets to select the year, race, and specific lap. They can ******search****** and *****query***** for specific laps and look at the lap times of each driver. Given that there exists two tooltips, a hover tooltip, and a permanent on-click tooltip, a user can compare the lap times of two drivers at any point in time. The user can also compare the relative position of a driver over time by watching how one of the points moves over time. 
+The user gets to select the year, race, and specific lap. They can **search** and **\*query** for specific laps and look at the lap times of each driver. Given that there exists two tooltips, a hover tooltip, and a permanent on-click tooltip, a user can compare the lap times of two drivers at any point in time. The user can also compare the relative position of a driver over time by watching how one of the points moves over time.
 
 Users can also compare how teammates driving for the same constructor compare. Driving for the same constructor generally indicates that they are in nearly identical cars, therefore, allowing for a user to draw performance comparisons between drivers.
 
@@ -63,7 +63,7 @@ There certainly exists more tasks that a user can interact with, however, these 
 
 The specific race is selected by using two dropdowns; selecting the year and the race from the list of races in that year. The user can also use a textbox to select what lap they want to look at.
 
-Each car is represented by a circle with a stroke around it to provide contrast with the white background. The color of the circle represents the constructor. Color and livery design is the traditional way that you recognize each unique constructor. Given that livery only works in much larger form factors, color is the perfect choice to identify the constructors. Unique colors are also used in the official TV broadcast for the timings board to quickly identify constructors. 
+Each car is represented by a circle with a stroke around it to provide contrast with the white background. The color of the circle represents the constructor. Color and livery design is the traditional way that you recognize each unique constructor. Given that livery only works in much larger form factors, color is the perfect choice to identify the constructors. Unique colors are also used in the official TV broadcast for the timings board to quickly identify constructors.
 
 Individual drivers are identified by either their 3 letter driver code (typically derived from their last name) and/or their permanent driver number. Permanent driver numbers were only introduced in 2014 and therefore any driver who did not participate in the 2014 season to present does not have a permanent driver number. The 3 letter driver code is always unique and does not expire, while the driver numbers are unique but are only tied to a driver for 2 years after their most recent race. The driver code appears in the center of the circle, with white or black text depending on the constructor color to allow for good contrast. If a driver has a driver number, this number is displayed underneath the driver code in smaller text.
 
@@ -71,9 +71,9 @@ The constructors and drivers have a legend where the constructor is labeled next
 
 The drivers are plotted linearly with their position being their relative time gap to the leader on that lap. There is an axis plot with 8 ticks which scale as the drivers spread apart from each other. In the background, between every other set of ticks, there is a darker pattern allowing for a user to easily see that a driver is between two times.
 
-When the user hovers over a driver, it shows the current position, the gap to the leader, and their current lap time. It also shows details on the driver including their name, nationality, time at the race, what constructor they drive for, and the nationality of the constructor. This allows for a user to get more in-depth information on a specific driver. Next to the name of the driver, there is a driver helmet icon to help identify that this is the driver. Next to the name of the constructor, there exists a car icon in the constructor color to identify the text as the constructor name. Constructors and drivers both race under separate nationalities, the nationalities are listed with their associated flags so that users quickly can determine the nationality. The tooltip also naturally appears next to the cursor. 
+When the user hovers over a driver, it shows the current position, the gap to the leader, and their current lap time. It also shows details on the driver including their name, nationality, time at the race, what constructor they drive for, and the nationality of the constructor. This allows for a user to get more in-depth information on a specific driver. Next to the name of the driver, there is a driver helmet icon to help identify that this is the driver. Next to the name of the constructor, there exists a car icon in the constructor color to identify the text as the constructor name. Constructors and drivers both race under separate nationalities, the nationalities are listed with their associated flags so that users quickly can determine the nationality. The tooltip also naturally appears next to the cursor.
 
-If the user clicks on a driver, a little red dot appears over the element indicating that it has been selected. On the right-hand side of the chart,  the information on the driver’s current position, gap to the leader, and current lap time are permanently displayed and updated to match the information of the current lap.
+If the user clicks on a driver, a little red dot appears over the element indicating that it has been selected. On the right-hand side of the chart, the information on the driver’s current position, gap to the leader, and current lap time are permanently displayed and updated to match the information of the current lap.
 
 Underneath the linear plot, there is a box where retired or lapped drivers are located. If a driver crashes, has an engine problem, or for some other reason has to retire, they are put into that box. At the end of the race, if the person in first has lapped cars, the lapped cars finish on the lap of the person in first and do not finish all their laps. Their tooltips include a status on why they have been put into the box. Including this information took some data processing as they are excluded from the lap data and it would be confusing to users if they just disappeared from the visualizer with no explanation.
 
@@ -95,7 +95,7 @@ Determining individual drivers and tracking their relative performance is straig
 
 Unfortunately, many constructors have liked to use similar colors and were not forced to be more unique in older days, therefore there are constructor colors that are relatively similar and not distinct. This can make it hard to quickly see which car is what. For example, Ferrari red, Sauber red, and Virgin red from 2010. The single colors don’t also reflect the real colors of the constructor at that time as I selected the colors based on their most recognizable car. This introduces bias into the visualization.
 
-There is also a plethora of information lost through the visualization of the Formula One race, not including pit stops, details on crashes,  safety cars, yellow flags (indications to slow down due to an incident or debris), red flags (stop racing), race restarts, and more.
+There is also a plethora of information lost through the visualization of the Formula One race, not including pit stops, details on crashes, safety cars, yellow flags (indications to slow down due to an incident or debris), red flags (stop racing), race restarts, and more.
 
 In older years, cars at the back of the pack could be significantly far away from the pack or those at the front could be very far away from those at the back or middle. This can make the chart hard to read, having some sort of zoom/scale could help alleviate these issues.
 
@@ -113,28 +113,28 @@ The visualization also does not scale well to smaller viewports such as phones.
 
 # Image
 
-![Untitled](CS7DS4%20Assignment%203%20729c02650a394ed588d67b3235a2ff20/Untitled.png)
+![Untitled](/report/CS7DS4%20Assignment%203%20Report/Untitled.png)
 
 # References
 
-[0] *Ergast API*, Chris Newell, [http://ergast.com/mrd](http://ergast.com/mrd). 
+[0] _Ergast API_, Chris Newell, [http://ergast.com/mrd](http://ergast.com/mrd).
 
-[1] “Formula One: Constructors.” *Wikipedia*, Wikimedia Foundation, 11 Dec. 2022, [https://en.wikipedia.org/wiki/Formula_One#Constructors](https://en.wikipedia.org/wiki/Formula_One#Constructors). 
+[1] “Formula One: Constructors.” _Wikipedia_, Wikimedia Foundation, 11 Dec. 2022, [https://en.wikipedia.org/wiki/Formula_One#Constructors](https://en.wikipedia.org/wiki/Formula_One#Constructors).
 
-[2] Dinuks. “Dinuks/Country-Nationality-List: ISO 3166-1 Country + Nationality Listing in Multiple Formats.” *GitHub*, [https://github.com/Dinuks/country-nationality-list](https://github.com/Dinuks/country-nationality-list). 
+[2] Dinuks. “Dinuks/Country-Nationality-List: ISO 3166-1 Country + Nationality Listing in Multiple Formats.” _GitHub_, [https://github.com/Dinuks/country-nationality-list](https://github.com/Dinuks/country-nationality-list).
 
-[3] “2021 Formula One Sporting Regulations.” *Fédération Internationale De l’Automobile* , Fédération Internationale De l’Automobile , 16 Dec. 2020, [https://www.fia.com/sites/default/files/2021_formula_1_sporting_regulations_-_iss_11-_2021-07-12.pdf](https://www.fia.com/sites/default/files/2021_formula_1_sporting_regulations_-_iss_11-_2021-07-12.pdf). 
+[3] “2021 Formula One Sporting Regulations.” _Fédération Internationale De l’Automobile_ , Fédération Internationale De l’Automobile , 16 Dec. 2020, [https://www.fia.com/sites/default/files/2021*formula_1_sporting_regulations*-\_iss_11-\_2021-07-12.pdf](https://www.fia.com/sites/default/files/2021_formula_1_sporting_regulations_-_iss_11-_2021-07-12.pdf).
 
-[4] “Formula One Car.” *Wikipedia*, Wikimedia Foundation, 10 Dec. 2022, [https://en.wikipedia.org/wiki/Formula_One_car](https://en.wikipedia.org/wiki/Formula_One_car). 
+[4] “Formula One Car.” _Wikipedia_, Wikimedia Foundation, 10 Dec. 2022, [https://en.wikipedia.org/wiki/Formula_One_car](https://en.wikipedia.org/wiki/Formula_One_car).
 
-[5] “Next.js by Vercel - the REACT Framework.” *By Vercel - The React Framework*, [https://nextjs.org/](https://nextjs.org/). 
+[5] “Next.js by Vercel - the REACT Framework.” _By Vercel - The React Framework_, [https://nextjs.org/](https://nextjs.org/).
 
-[6] “The React Component Library You Always Wanted.” *MUI*, [https://mui.com/](https://mui.com/). 
+[6] “The React Component Library You Always Wanted.” _MUI_, [https://mui.com/](https://mui.com/).
 
-[7] Bostock, Mike. “Data-Driven Documents.” *D3.Js*, [https://d3js.org/](https://d3js.org/). 
+[7] Bostock, Mike. “Data-Driven Documents.” _D3.Js_, [https://d3js.org/](https://d3js.org/).
 
-[8] “Framer Motion.” *Production-Ready Animation Library for React*, [https://www.framer.com/motion/](https://www.framer.com/motion/). 
+[8] “Framer Motion.” _Production-Ready Animation Library for React_, [https://www.framer.com/motion/](https://www.framer.com/motion/).
 
-[9] “Develop. Preview. Ship. for the Best Frontend Teams.” *Vercel*, [https://vercel.com/](https://vercel.com/). 
+[9] “Develop. Preview. Ship. for the Best Frontend Teams.” _Vercel_, [https://vercel.com/](https://vercel.com/).
 
-[10] “Live Timing.” *Formula 1 - The Official F1 Website*, [https://www.formula1.com/en/f1-live.html](https://www.formula1.com/en/f1-live.html).
+[10] “Live Timing.” _Formula 1 - The Official F1 Website_, [https://www.formula1.com/en/f1-live.html](https://www.formula1.com/en/f1-live.html).
