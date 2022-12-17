@@ -64,9 +64,15 @@ export default function Home() {
           date = date.setDate(date.getDate() + 1);
           const updatedRounds = result.data.MRData.RaceTable.Races.map(
             (race) => {
-              const raceDate = new Date(race.date);
-
-              if (date > raceDate) {
+              if (race?.date) {
+                const raceDate = new Date(race.date);
+                if (date > raceDate) {
+                  return {
+                    id: race.round,
+                    label: race.raceName,
+                  };
+                }
+              } else {
                 return {
                   id: race.round,
                   label: race.raceName,
@@ -342,7 +348,7 @@ export default function Home() {
       </Typography>
       <Typography variant="body1" paragraph={true}>
         Powered by the{" "}
-        <Link href="http://ergast.com/mr" underline="hover" target="_blank">
+        <Link href="http://ergast.com/mrd/" underline="hover" target="_blank">
           Ergast API
         </Link>
         .

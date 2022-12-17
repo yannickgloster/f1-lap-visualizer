@@ -11,7 +11,7 @@ export default async function handler(req, res) {
     );
   }
 
-  const year = parseInt(fallback[0]);
+  const year = fallback[0];
 
   if (fallback.length > 1) {
     const roundNum = parseInt(fallback[1]);
