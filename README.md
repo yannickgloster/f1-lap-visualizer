@@ -1,5 +1,7 @@
 # F1 Lap Visualizer
 
+[Live Deployment](https://f1-visualization.vercel.app/)
+
 The Formula 1 Race visualizer is an unofficial visualizer of races from 1996 onwards. The site will update with the latest races after they happen.
 
 Once you select a year and a round, you can select a lap or click play to see how the gap to the leader evolved over time.
