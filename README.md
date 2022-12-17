@@ -24,5 +24,6 @@ _Viewing on mobile devices my cause strange behavior and is discouraged._
 
 ### Build Instructions
 
-1. Install Packages - `npm i`
-2. Run Development Server - `npm run dev`
+1. Rename `.env.example` to `.env`
+2. Install Packages - `npm i`
+3. Run Development Server - `npm run dev`
